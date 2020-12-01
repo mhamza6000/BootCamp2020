@@ -7,111 +7,136 @@
 </head>
 <body>
     <form action="http://www.example.com/login.php" method="POST">
-        <p>
-            First Name:<input type="text" name="firstname" size="20" maxlength="32"/>
-            Last Name: <input type="text" name="lastname" size="20" maxlength="32"/>
-        </p>
-        <p>
-            Gender: 
-            <input type="radio" name="gender" value="m" checked/>Male
-            <input type="radio" name="gender" value="f"/>Female
-        </p>
-        <p>
-            City:
-            <select name="city">
-                <option value="Abbotabad">Abbotabad</option>
-                <option value="Bahawalpur">Bahawalpur</option>
-                <option value="Chiniot">Chiniot</option>
-                <option value="Dera Ismail Khan">Dera Ismail Khan</option>
-                <option value="Faisalabad">Faisalabad</option>
-                <option value="Gawadar">Gawadar</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Islamabad">Islamabad</option>
-                <option value="Jacobabad">Jacobabad</option>
-                <option value="Karachi" selected>Karachi</option>
-                <option value="Lahore">Lahore</option>
-                <option value="Multan">Multan</option>
-                <option value="Nawabshah">Nawabshah</option>
-                <option value="Okara">Okara</option>
-                <option value="Peshawar">Peshawar</option>
-                <option value="Quetta">Quetta</option>
-                <option value="Rawalpindi">Rawalpindi</option>
-                <option value="Sukkur">Sukkur</option>
-                <option value="Taxila">Taxila</option>
-                <option value="Umerkot">Umerkot</option>
-                <option value="Vehari">Vehari</option>
-                <option value="Wah">Wah</option>
-                <option value="Ziarat">Ziarat</option>
-            </select>
-        </p>
-        <p>
-            Province:
-            <select name="province">
-                <option value="Balochistan">Balochistan</option>
-                <option value="Khyber Pakhtunkhuwa">Khyber Pakhtunkhuwa</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Sindh" selected>Sindh</option>
-            </select>
-            if other region, please specify:
-            <input type="text" name="province" size="20" maxlength="25"/>
-        </p>
-        <p>
-            Course interests:
-            <input type="checkbox" name="course" value="AIC"/>Artificial Intelligence
-            <input type="checkbox" name="course" value="IOTA"/>Internet of Things with Artificial Intelligence
-            <input type="checkbox" name="course" value="CNC"/>Cloud Native Computing 
-            <input type="checkbox" name="course" value="BCC"/>Blockchain Computing
-            <input type="checkbox" name="course" value="5G"/>5G and Networking 
-            <input type="checkbox" name="course" value="QC"/>Quantum Computing
-        </p>
-        <p>
-            Attendence Type:
-            <input type="radio" name="Attendence type" value="Onsite"/>Onsite
-            <input type="radio" name="Attendence type" value="Online" checked/>Online
-        </p>
-        <p>
-            Upload Profile Picture:<br/>
-            <input type="file" name="dp"/>
-        </p>
-        <p>
-            Upload CNIC/B.Form:<br/>
-            <input type="file" name="Identification"/>
-        </p>
-        <p>
-            Date of passing Matric:
-            <input type="date" name="Matricpassdate">
-        </p>
-        <p>
-            Date of passing FSc:
-            <input type="date" name="FScpassdate">
-        </p>
-        <p>
-            Upload Matric Marks sheet:<br/>
-            <input type="file" name="MatricMC"/>
-        </p>
-        <p>
-            Upload F.Sc. Marks sheet:<br/>
-            <input type="file" name="FSc MC"/>
-        </p>
-        <p>
-            Upload Matric Certificate:<br/>
-            <input type="file" name="MatricCert"/>
-        </p>
-        <p>
-            Upload FSc Certificate:<br/>
-            <input type="file" name="FSc Cert"/>
-        </p>
+      <fieldset>
+          <legend>Personal Information</legend>
+            <p>
+                First Name:<input type="text" name="firstname" size="20" maxlength="32" required/>
+                Last Name: <input type="text" name="lastname" size="20" maxlength="32" required/>
+            </p>
+            <p>
+                Gender: 
+                <label><input type="radio" name="gender" value="m" checked/>Male</label>
+                <input id="f" type="radio" name="gender" value="f"/>
+                <label for="f">Female</label>
+            </p>
+            <p>
+                City:
+                <select name="city" multiple required>
+                    <option value="Abbotabad">Abbotabad</option>
+                    <option value="Bahawalpur">Bahawalpur</option>
+                    <option value="Chiniot">Chiniot</option>
+                    <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Gawadar">Gawadar</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Jacobabad">Jacobabad</option>
+                    <option value="Karachi" selected>Karachi</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Nawabshah">Nawabshah</option>
+                    <option value="Okara">Okara</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Quetta">Quetta</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Sukkur">Sukkur</option>
+                    <option value="Taxila">Taxila</option>
+                    <option value="Umerkot">Umerkot</option>
+                    <option value="Vehari">Vehari</option>
+                    <option value="Wah">Wah</option>
+                    <option value="Ziarat">Ziarat</option>
+                </select>
+            </p>
+            <p>
+                Province:
+                <select name="province" required>
+                    <option value="Balochistan">Balochistan</option>
+                    <option value="Khyber Pakhtunkhuwa">Khyber Pakhtunkhuwa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Sindh" selected>Sindh</option>
+                </select>
+                if other region, please specify:
+                <input type="text" name="province" size="20" maxlength="25"/>
+            </p>
+            <p>
+                Enter Mobile Number:
+                <input type="text" name="mobile" required/>
+            </p>
+            <p>
+                Enter Phone Number:
+                <input type="text" name="phone"/>
+            </p>
+            <p>
+                Enter Email-Adress:
+                <input type="email" name="email" size="30" required/>
+            </p>
+            <p>
+                Enter Website/LinkedIn URL: 
+                <input type="url" name="profile" size="30"/>
+            </p>
+      </fieldset>
+      <fieldset>
+          <legend>Educational Information</legend>
+            <p>
+                Course interests:
+                <input type="checkbox" name="course" value="AIC"/>Artificial Intelligence
+                <input type="checkbox" name="course" value="IOTA"/>Internet of Things with Artificial Intelligence
+                <input type="checkbox" name="course" value="CNC"/>Cloud Native Computing 
+                <input type="checkbox" name="course" value="BCC"/>Blockchain Computing
+                <input type="checkbox" name="course" value="5G"/>5G and Networking 
+                <input type="checkbox" name="course" value="QC"/>Quantum Computing
+            </p>
+            <p>
+                Attendence Type:
+                <input type="radio" name="Attendence type" value="Onsite"/>Onsite
+                <input type="radio" name="Attendence type" value="Online" checked/>Online
+            </p>
+            <p>
+                Upload Profile Picture:<br/>
+                <input type="file" name="dp"/>
+            </p>
+            <p>
+                Upload CNIC/B.Form:<br/>
+                <input type="file" name="Identification" required/>
+            </p>
+            <p>
+                Date of passing Matric:
+                <input type="date" name="Matricpassdate"/>
+            </p>
+            <p>
+                Date of passing FSc:
+                <input type="date" name="FScpassdate"/>
+            </p>
+            <p>
+                Upload Matric Marks sheet:<br/>
+                <input type="file" name="MatricMC"/>
+            </p>
+            <p>
+                Upload F.Sc. Marks sheet:<br/>
+                <input type="file" name="FSc MC"/>
+            </p>
+            <p>
+                Upload Matric Certificate:<br/>
+                <input type="file" name="MatricCert"/>
+            </p>
+            <p>
+                Upload FSc Certificate:<br/>
+                <input type="file" name="FSc Cert"/>
+            </p>
+      </fieldset>
         <p>
             Password:
-            <input type="password" name="password" size="20" maxlength="32"/>
+            <input type="password" name="password" size="20" maxlength="32" required/>
         </p>
         <p>
             Re-Enter Password:
-            <input type="password" name="password" size="20" maxlength="32"/>
+            <input type="password" name="password" size="20" maxlength="32" required/>
         </p>
         <p>
             <input type="submit" value="Upload"/>
-            <input type="submit"/>
+            <br/>
+            <br/>
+            <input type="image" src="C:\Users\mhamz\OneDrive\Desktop"/>
         </p>
     </form>
 </body>
